@@ -185,12 +185,16 @@
  ],
  "permissions": [
   {
-   "role": "Accounts Manager",
+   "role": "Invoice Manager",
    "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1, "delete": 1, "print": 1, "email": 1
   },
   {
-   "role": "Accounts User",
+   "role": "Invoice User",
    "read": 1, "write": 1, "create": 1, "print": 1, "email": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1, "delete": 1, "print": 1, "email": 1
   }
  ]
 }
