@@ -1,0 +1,196 @@
+{
+ "doctype": "DocType",
+ "name": "Import Invoice",
+ "module": "Gesales",
+ "autoname": "naming_series:",
+ "is_submittable": 1,
+ "engine": "InnoDB",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "label": "Series",
+   "fieldtype": "Select",
+   "options": "II-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "label": "Posting Date",
+   "fieldtype": "Date",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "due_date",
+   "label": "Due Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "label": "Currency",
+   "fieldtype": "Link",
+   "options": "Currency",
+   "default": "BHD"
+  },
+  {
+   "fieldname": "vat_rate",
+   "label": "VAT Rate (%)",
+   "fieldtype": "Percent",
+   "default": "0"
+  },
+
+  {
+   "fieldname": "items_section",
+   "label": "Items",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "label": "Items",
+   "fieldtype": "Table",
+   "options": "Import Invoice Item",
+   "reqd": 1
+  },
+
+  {
+   "fieldname": "charges_section",
+   "label": "Additional Charges",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customs_vat",
+   "label": "Customs VAT",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "custom_duty",
+   "label": "Custom Duty",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "border_charge",
+   "label": "Border Charge",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "translation_charge",
+   "label": "Translation Charge",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "clearing_charge",
+   "label": "Clearing Charge",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "documentation_charge",
+   "label": "Documentation Charge",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "collection_charge",
+   "label": "Collection Charge",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "other_charge",
+   "label": "Other Charge",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "total_charges",
+   "label": "Total Charges",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "read_only": 1
+  },
+
+  {
+   "fieldname": "totals_section",
+   "label": "Totals",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "label": "Total Quantity",
+   "fieldtype": "Float",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross_total",
+   "label": "Gross Total",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vat_amount",
+   "label": "Vat",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_total",
+   "label": "Net Total",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "read_only": 1,
+   "bold": 1,
+   "in_list_view": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "Accounts Manager",
+   "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1, "delete": 1, "print": 1, "email": 1
+  },
+  {
+   "role": "Accounts User",
+   "read": 1, "write": 1, "create": 1, "print": 1, "email": 1
+  }
+ ]
+}

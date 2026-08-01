@@ -1,0 +1,41 @@
+{
+ "doctype": "DocType",
+ "name": "Import Invoice Item",
+ "module": "Gesales",
+ "istable": 1,
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "label": "Item / Description",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "qty",
+   "label": "Qty",
+   "fieldtype": "Float",
+   "default": "1",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rate",
+   "label": "Rate",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ]
+}
+
