@@ -10,7 +10,7 @@ authors = [
 description = "invoice import"
 requires-python = ">=3.10"
 readme = "README.md"
-dynamic = ["version"]
+dynamic = ["0.0.1"]
 dependencies = [
     # frappe is added as a dependency by bench, not here
 ]
