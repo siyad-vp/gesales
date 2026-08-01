@@ -10,7 +10,7 @@ authors = [
 description = "invoice import"
 requires-python = ">=3.10"
 readme = "README.md"
-version = ["0.0.1"]
+version = "0.0.1"
 dependencies = [
     # frappe is added as a dependency by bench, not here
 ]
@@ -19,7 +19,7 @@ dependencies = [
 name = "gesales"
 
 [project.urls]
-Homepage = "https://github.com/<your-org>/gesales"
+Homepage = "https://github.com/siyad-vp/gesales"
 
 [tool.bench.frappe-dependencies]
 frappe = ">=15.0.0,<16.0.0"
